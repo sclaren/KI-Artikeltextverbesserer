@@ -59,7 +59,7 @@ def setup_rag_chains():
     analysis_llm = AzureChatOpenAI(
         azure_deployment=AZURE_OPENAI_DEPLOYMENT_NAME,
         api_version=AZURE_OPENAI_API_VERSION,
-        temperature=0.1,
+        temperature=0.0,
     )
     analysis_document_chain = create_stuff_documents_chain(analysis_llm, analysis_prompt)
     analysis_chain = create_retrieval_chain(retriever, analysis_document_chain)
