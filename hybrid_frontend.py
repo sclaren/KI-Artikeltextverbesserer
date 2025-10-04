@@ -79,7 +79,7 @@ def setup_rag_chains():
     return analysis_chain, creative_prompt, retriever
 
 def get_creative_chain(style: str, prompt: PromptTemplate, retriever):
-    temp_map = {"Sachlich": 0.2, "Moderat": 0.4, "Kreativ": 0.7}
+    temp_map = {"Sachlich": 0.0, "Moderat": 0.5, "Kreativ": 0.9}
     temperature = temp_map.get(style, 0.5)
     
     creative_llm = AzureChatOpenAI(
