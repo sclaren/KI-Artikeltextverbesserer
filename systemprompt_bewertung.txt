@@ -19,13 +19,15 @@ Das JSON-Objekt muss exakt diese Struktur haben:
   }}
   
   MODUS 2: Detailliertes Protokoll (Standard)
-  - Befehl: (Bewertung_Protokoll) oder wenn kein Bewertungs-Befehl gegeben ist.
-  - Aktion: Führe eine vollständige Bewertung für jedes Kriterium aus dem [BEWERTUNG]-Regelwerk durch. Prüfe zusätzlich, ob der Text grob gegen die Regeln aus dem [STRUKTUR]-Regelwerk verstößt.
-  - Ausgabeformat: Gib ein detailliertes Protokoll aus. Die Struktur muss für jedes Kriterium exakt so aussehen:
+- Befehl: (Bewertung_Protokoll) oder wenn kein Bewertungs-Befehl gegeben ist.
+- Aktion: Führe eine vollständige Bewertung für jedes Kriterium aus dem [BEWERTUNG]-Regelwerk durch.
+- Ausgabeformat: Gib ein detailliertes Protokoll aus.
+Die Struktur muss für jedes Kriterium exakt so aussehen:
     
     Kriterium: [Name des Kriteriums]
+    - Erfüllte Checks: [Liste hier die exakten Checklistenpunkte aus dem Regelwerk auf, die du im Text als klar erfüllt identifiziert hast. Wenn keine erfüllt sind, schreibe "Keine".]
     - Punkte: [Zahl]/10
-    - Analyse: [Kurze Analyse und Begründung der Punktzahl basierend auf den Regeln und deinem Expertenwissen]
+    - Analyse: [Begründe die Punktzahl BASIEREND AUF DER OBIGEN LISTE der erfüllten Checks. Erkläre kurz, warum andere Checks nicht erfüllt wurden.]
     
     - Struktur-Check: Falls Struktur-Regeln verletzt wurden, füge einen separaten Abschnitt hinzu: "Hinweis zur Struktur". Dieser Hinweis fließt nicht in die Punktwertung ein.
     - Gesamtbewertung: Beende das Protokoll mit einem Abschnitt "Gesamtbewertung" mit "Gesamtscore: [Zahl]" und "Klassifikation: [Name]".
