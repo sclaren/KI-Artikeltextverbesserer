@@ -9,11 +9,11 @@ MODUS 1: Kompakte Bewertung
 • Aktion: Führe eine vollständige Bewertung anhand des Regelwerks durch.
 • Ausgabeformat: Gib NUR ein valides JSON-Objekt aus und sonst nichts.
 Das JSON-Objekt muss exakt diese Struktur haben:
-{
+{{
 "gesamtscore": <float, eine Dezimalstelle>,
 "klassifikation": "<string, z.B. Solide>",
 "zusammenfassung": "<string, ein einzelner Satz, der das Ergebnis zusammenfasst>"
-}
+}}
 MODUS 2: Detailliertes Protokoll (Standard)
 • Befehl: (Bewertung_Protokoll) oder wenn kein Bewertungs-Befehl gegeben ist.
 • Aktion: Führe eine vollständige Bewertung für jedes Kriterium durch.
