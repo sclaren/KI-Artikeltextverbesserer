@@ -3,13 +3,14 @@
 [BEWERTUNG: Gewichtung: SEO & Auffindbarkeit] Das Kriterium SEO & Auffindbarkeit hat eine Gewichtung von 0.15.
 [BEWERTUNG: Gewichtung: Strukturierung & Formatierung] Das Kriterium Strukturierung & Formatierung hat eine Gewichtung von 0.12.
 [BEWERTUNG: Gewichtung: Nutzenorientierung] Das Kriterium Nutzenorientierung hat eine Gewichtung von 0.15.
-[BEWERTUNG: Gewichtung: Rechtssicherheit] Das Kriterium Rechtssicherheit hat eine Gewichtung von 0.10.
-[BEWERTUNG: Gewichtung: Unique Content] Das Kriterium Unique Content hat eine Gewichtung von 0.03.
+[BEWERTUNG: Gewichtung: Rechtssicherheit] Das Kriterium Rechtssicherheit hat eine Gewichtung von 0.13.
 [BEWERTUNG: Gewichtung: Call-to-Action] Das Kriterium Call-to-Action hat eine Gewichtung von 0.02.
-[BEWERTUNG: Regel: Bezeichnungen] Alle Bezeichnungen müssen exakt und ohne Abkürzungen oder Variationen verwendet werden.
 
-[BEWERTUNG: Formel: Standard] Die Standard-Bewertungsformel für Checklisten lautet: PUNKTE = MAX(1, ANZAHL_ERFÜLLTER_CHECKS).
-[BEWERTUNG: Formel: Ausnahme] Die Ausnahme-Formel für Kriterien mit fünf Checks lautet: PUNKTE = MAX(1, ANZAHL_ERFÜLLTER_CHECKS × 2), maximal 10 Punkte.
+[BEWERTUNG: Regel: Einzelkriterien-Punkte] Die Punktevergabe für jedes Kriterium folgt einem 4-Stufen-System:
+- 10 Punkte (Exzellent): 100% der Checklisten-Punkte für dieses Kriterium sind erfüllt.
+- 7 Punkte (Gut): Mindestens 75% der Checklisten-Punkte sind erfüllt.
+- 4 Punkte (Solide): Mindestens 50% der Checklisten-Punkte sind erfüllt.
+- 0 Punkte (Überarbeiten): Weniger als 50% der Checklisten-Punkte sind erfüllt.
 
 [BEWERTUNG: Checkliste: Vollständigkeit] Ein Kriterium für Vollständigkeit ist die Angabe von Gewicht oder Menge.
 [BEWERTUNG: Checkliste: Vollständigkeit] Ein Kriterium für Vollständigkeit ist die Angabe von Herkunft oder Land.
@@ -25,41 +26,35 @@
 [BEWERTUNG: Checkliste: Verständlichkeit & Lesbarkeit] Ein Kriterium für Verständlichkeit ist eine durchschnittliche Satzlänge von maximal 20 Wörtern.
 [BEWERTUNG: Checkliste: Verständlichkeit & Lesbarkeit] Ein Kriterium für Verständlichkeit ist die Abwesenheit von Rechtschreibfehlern.
 [BEWERTUNG: Checkliste: Verständlichkeit & Lesbarkeit] Ein Kriterium für Verständlichkeit ist die Abwesenheit von Grammatikfehlern.
-[BEWERTUNG: Checkliste: Verständlichkeit & Lesbarkeit] Ein Kriterium für Verständlichkeit ist, dass Fachbegriffe erklärt oder vermieden werden.
-[BEWERTUNG: Checkliste: Verständlichkeit & Lesbarkeit] Ein Kriterium für Verständlichkeit ist eine logische Informationsreihenfolge.
+[BEWERTUNG: Checkliste: Verständlichkeit & Lesbarkeit] Der Text enthält weniger als 5 Füllwörter (z.B. "eigentlich", "gewissermaßen", "vielleicht").
+[BEWERTUNG: Checkliste: Verständlichkeit & Lesbarkeit] Der Text verwendet durchgehend eine konsistente Ansprache (z.B. "Sie" oder "Du", nicht gemischt).
 
 [BEWERTUNG: Checkliste: SEO & Auffindbarkeit] Ein SEO-Kriterium ist die Platzierung des Hauptkeywords im Titel innerhalb der ersten 50 Zeichen.
 [BEWERTUNG: Checkliste: SEO & Auffindbarkeit] Ein SEO-Kriterium ist eine Keyword-Dichte von 1 bis 3 Prozent im Text.
 [BEWERTUNG: Checkliste: SEO & Auffindbarkeit] Ein SEO-Kriterium ist die Verwendung von mindestens zwei semantischen Synonymen.
 [BEWERTUNG: Checkliste: SEO & Auffindbarkeit] Ein SEO-Kriterium ist eine Textlänge zwischen 100 und 400 Wörtern.
-[BEWERTUNG: Checkliste: SEO & Auffindbarkeit] Ein SEO-Kriterium ist, dass der Text für eine Meta-Description strukturiert ist.
 
 [BEWERTUNG: Checkliste: Strukturierung & Formatierung] Ein Struktur-Kriterium ist die Verwendung von mindestens 3 Absätzen.
 [BEWERTUNG: Checkliste: Strukturierung & Formatierung] Ein Struktur-Kriterium ist die Verwendung von Aufzählungen (Bullet Points).
 [BEWERTUNG: Checkliste: Strukturierung & Formatierung] Ein Struktur-Kriterium ist die Verwendung von Hervorhebungen (fett oder kursiv).
 [BEWERTUNG: Checkliste: Strukturierung & Formatierung] Ein Struktur-Kriterium ist eine maximale Absatzlänge von 80 Wörtern.
-[BEWERTUNG: Checkliste: Strukturierung & Formatierung] Ein Struktur-Kriterium ist eine insgesamt gut scanbare Struktur.
 
-[BEWERTUNG: Checkliste: Nutzenorientierung] Ein Kriterium der Nutzenorientierung ist die Beschreibung eines konkreten Kundennutzens.
-[BEWERTUNG: Checkliste: Nutzenorientierung] Ein Kriterium der Nutzenorientierung ist die Nennung von mindestens zwei Anwendungsbeispielen.
-[BEWERTUNG: Checkliste: Nutzenorientierung] Ein Kriterium der Nutzenorientierung ist die Beschreibung von Geschmack oder Qualität.
-[BEWERTUNG: Checkliste: Nutzenorientierung] Ein Kriterium der Nutzenorientierung ist eine emotionale Ansprache des Kunden.
+[BEWERTUNG: Checkliste: Nutzenorientierung] Der Text enthält mindestens zwei Anwendungsbeispiele.
+[BEWERTUNG: Checkliste: Nutzenorientierung] Der Text beschreibt eine sensorische Eigenschaft (z.B. Geschmack, Geruch, Textur).
+[BEWERTUNG: Checkliste: Nutzenorientierung] Der Text enthält mindestens eines der folgenden Signalwörter: "Vorteil", "Genuss", "einfach", "schnell", "praktisch".
 
 [BEWERTUNG: Checkliste: Rechtssicherheit] Ein Kriterium für Rechtssicherheit ist eine vollständige Zutatenliste.
 [BEWERTUNG: Checkliste: Rechtssicherheit] Ein Kriterium für Rechtssicherheit sind korrekte Allergenhinweise.
 [BEWERTUNG: Checkliste: Rechtssicherheit] Ein Kriterium für Rechtssicherheit ist das Vorhandensein von Lagerungshinweisen.
-[BEWERTUNG: Checkliste: Rechtssicherheit] Ein Kriterium für Rechtssicherheit ist der Verzicht auf irreführende Aussagen.
 [BEWERTUNG: Checkliste: Rechtssicherheit] Ein Kriterium für Rechtssicherheit sind ausreichende Herstellerangaben.
 
-[BEWERTUNG: Punkteregel: Unique Content] Für das Kriterium Unique Content werden je nach Originalitätsgrad 10, 7, 5, 3 oder 1 Punkt vergeben.
-[BEWERTUNG: Punkteregel: Call-to-Action] Für das Kriterium Call-to-Action werden je nach Klarheit der Handlungsaufforderung 10, 6, 4 oder 1 Punkt vergeben.
-
+[BEWERTUNG: Punkteregel: Call-to-Action] Für das Kriterium Call-to-Action werden je nach Klarheit der Handlungsaufforderung 10, 7, 4 oder 0 Punkte vergeben.
 [BEWERTUNG: Formel: Gesamtscore] Der Gesamtscore wird berechnet mit der Formel: GESAMTSCORE = Summe aller (KRITERIUM_PUNKTE × GEWICHTUNG).
 [BEWERTUNG: Klassifikation: Regel] Ein Gesamtscore wird auf eine Dezimalstelle gerundet.
-[BEWERTUNG: Klassifikation: PREMIUM] Ein Gesamtscore von 9,0 bis 10,0 entspricht der Klassifikation PREMIUM.
-[BEWERTUNG: Klassifikation: SEHR GUT] Ein Gesamtscore von 8,0 bis 8,9 entspricht der Klassifikation SEHR GUT.
-[BEWERTUNG: Klassifikation: GUT] Ein Gesamtscore von 7,0 bis 7,9 entspricht der Klassifikation GUT.
-[BEWERTUNG: Klassifikation: BEFRIEDIGEND] Ein Gesamtscore von 6,0 bis 6,9 entspricht der Klassifikation BEFRIEDIGEND.
-[BEWERTUNG: Klassifikation: AUSREICHEND] Ein Gesamtscore von 5,0 bis 5,9 entspricht der Klassifikation AUSREICHEND.
-[BEWERTUNG: Klassifikation: MANGELHAFT] Ein Gesamtscore von 4,0 bis 4,9 entspricht der Klassifikation MANGELHAFT.
-[BEWERTUNG: Klassifikation: UNGENÜGEND] Ein Gesamtscore von 1,0 bis 3,9 entspricht der Klassifikation UNGENÜGEND.
+
+[BEWERTUNG: Klassifikation: Stufen] Die Gesamtbewertung folgt einem 4-Stufen-System:
+[BEWERTUNG: Klassifikation: Exzellent] Ein Gesamtscore von 9,0 bis 10,0 entspricht der Klassifikation EXZELLENT.
+[BEWERTUNG: Klassifikation: Gut] Ein Gesamtscore von 7,0 bis 8,9 entspricht der Klassifikation GUT.
+[BEWERTUNG: Klassifikation: Solide] Ein Gesamtscore von 5,0 bis 6,9 entspricht der Klassifikation SOLIDE.
+[BEWERTUNG: Klassifikation: Überarbeiten] Ein Gesamtscore unter 5,0 entspricht der Klassifikation ÜBERARBEITEN.
+```

@@ -31,13 +31,21 @@ Die Struktur muss für jedes Kriterium exakt so aussehen:
     
     - Struktur-Check: Falls Struktur-Regeln verletzt wurden, füge einen separaten Abschnitt hinzu: "Hinweis zur Struktur". Dieser Hinweis fließt nicht in die Punktwertung ein.
     - Gesamtbewertung: Beende das Protokoll mit einem Abschnitt "Gesamtbewertung" mit "Gesamtscore: [Zahl]" und "Klassifikation: [Name]".
+    - Qualitative Hinweise: Füge nach der Gesamtbewertung einen letzten Abschnitt mit der Überschrift "### Qualitative Hinweise (nicht bewertet)" hinzu. Gib hier Feedback zu den folgenden Punkten:
+    
+      -Tonalität & Stil: Wirkt der Text eher sachlich, werblich oder emotional? Passt der Stil zum Produkt?
+    
+      -Logischer Fluss: Ist die Reihenfolge der Informationen für einen Leser gut nachvollziehbar?
+    
+      -Verständlichkeit: Werden unklare oder potenziell missverständliche Formulierungen verwendet?
 
 	
 ---
 
 ALLGEMEINE REGELN:
-    - Nutze die folgenden Kontext-Informationen aus den Regelwerken als deine primäre und wichtigste Quelle.
-    - Für Aspekte, für die im Kontext keine spezifische Regel existiert (z.B. allgemeine Grammatik, Stilistik oder logische Fehler), nutze dein eigenes Expertenwissen.
+    - Nutze die folgenden Kontext-Informationen aus den Regelwerken als deine primäre und wichtigste Quelle für die BEWERTUNG.
+    
+    - Nutze für die QUALITATIVEN HINWEISE dein eigenes Expertenwissen als Texter.
     
     Kontext aus den Regelwerken:
     {context}
