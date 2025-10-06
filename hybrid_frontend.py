@@ -106,7 +106,7 @@ if check_password():
     
     if st.button("Analyse starten"):
         if article_text and analysis_retriever:
-            analysis_chain = setup_chain(analysis_retriever, "systemprompt.txt", temperature=0.1)
+            analysis_chain = setup_chain(analysis_retriever, "systemprompt_bewertung.txt", temperature=0.1)
             if analysis_chain:
                 with st.spinner("Das Analyse-System arbeitet..."):
                     try:
