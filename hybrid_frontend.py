@@ -137,7 +137,7 @@ if check_password():
             temp_map = {"Sachlich": 0.2, "Moderat": 0.5, "Kreativ": 0.8}
             temperature = temp_map.get(style, 0.5)
             
-            creative_chain = setup_chain(creative_retriever, "systemprompt_creative.txt", temperature=temperature)
+            creative_chain = setup_chain(creative_retriever, "systemprompt_kreativ.txt", temperature=temperature)
             if creative_chain:
                 command_string = "(Vorschlag)"
                 if do_rezept: command_string += "(Rezept)"
