@@ -1,8 +1,8 @@
 import streamlit as st
 import os
-import glob # NEU: Importiert, um nach Dateien zu suchen
 from langchain_openai import AzureOpenAIEmbeddings, AzureChatOpenAI
-from langchain_community.document_loaders import TextLoader, DirectoryLoader
+# Wir brauchen jetzt nur noch DirectoryLoader
+from langchain_community.document_loaders import DirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_core.prompts import PromptTemplate
@@ -35,10 +35,10 @@ def check_password():
     elif password != "": st.error("Das eingegebene Passwort ist falsch.")
     return False
 
-# ======================= ⛓️ DYNAMISCHES RAG-SETUP (IHR VORSCHLAG) =======================
+# ======================= ⛓️ RAG-SETUP MIT ORDNER-TRENNUNG (FINAL) =======================
 @st.cache_resource
-def setup_base_retrievers():
-    st.info("Initialisiere RAG-System...")
+def setup_retrievers():
+    st.info("Initialisiere RAG-System mit getrennten Wissensdatenbanken...")
     
     # Gemeinsame Komponenten
     embeddings = AzureOpenAIEmbeddings(
@@ -47,35 +47,25 @@ def setup_base_retrievers():
     )
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1500, chunk_overlap=200)
 
-    # --- 1. Wissensbasis NUR für die Analyse (immer gleich) ---
-    analysis_loader = DirectoryLoader('./data/analyse/', glob="**/*.txt")
+    # --- 1. Wissensbasis für die Analyse ---
+    # NEU: Lädt jetzt mehrere Dateitypen
+    analysis_loader = DirectoryLoader('./data/analyse/', glob="**/*[.txt,.md,.html]", show_progress=True, recursive=True)
     analysis_docs = analysis_loader.load()
     analysis_splits = text_splitter.split_documents(analysis_docs)
     analysis_vectorstore = FAISS.from_documents(documents=analysis_splits, embedding=embeddings)
     analysis_retriever = analysis_vectorstore.as_retriever()
     
-    st.success("RAG-System ist bereit!")
-    return analysis_retriever, embeddings, text_splitter
-
-def get_creative_retriever(article_type, embeddings, text_splitter):
-    # Diese Funktion baut jetzt DYNAMISCH die Wissensbasis für die Erstellung
-    st.info(f"Lade Regeln für Artikelart: {article_type}...")
-    
-    # Lädt die allgemeinen Analyse-Regeln
-    base_loader = DirectoryLoader('./data/analyse/', glob="**/*.txt")
-    docs = base_loader.load()
-
-    # Lädt die spezifischen Struktur-Regeln für den gewählten Typ
-    structure_file_path = f'./data/erstellung/regelwerk_struktur_{article_type}.txt'
-    if os.path.exists(structure_file_path):
-        structure_loader = TextLoader(structure_file_path, encoding='utf-8')
-        docs.extend(structure_loader.load())
-    else:
-        st.warning(f"Keine spezifischen Struktur-Regeln für '{article_type}' gefunden. Nutze nur allgemeine Regeln.")
-
-    creative_splits = text_splitter.split_documents(docs)
+    # --- 2. Wissensbasis für die kreative Erstellung ---
+    # NEU: Lädt jetzt mehrere Dateitypen
+    creative_loader_erstellung = DirectoryLoader('./data/erstellung/', glob="**/*[.txt,.md,.html]", show_progress=True, recursive=True)
+    creative_loader_analyse = DirectoryLoader('./data/analyse/', glob="**/*[.txt,.md,.html]", show_progress=True, recursive=True)
+    creative_docs = creative_loader_erstellung.load() + creative_loader_analyse.load() # Kombiniert das Wissen
+    creative_splits = text_splitter.split_documents(creative_docs)
     creative_vectorstore = FAISS.from_documents(documents=creative_splits, embedding=embeddings)
-    return creative_vectorstore.as_retriever()
+    creative_retriever = creative_vectorstore.as_retriever()
+
+    st.success("RAG-System ist bereit!")
+    return analysis_retriever, creative_retriever
 
 def setup_chain(retriever, prompt_file, temperature=0.1):
     # (Keine Änderungen hier)
@@ -96,12 +86,12 @@ def setup_chain(retriever, prompt_file, temperature=0.1):
     rag_chain = create_retrieval_chain(retriever, document_chain)
     return rag_chain
 
-# ======================= 🎨 STREAMLIT OBERFLÄCHE =======================
-st.set_page_config(page_title="Article-QA v8 (Flexibles RAG-System)", layout="wide")
+# ======================= 🎨 STREAMLIT OBERFLÄCHE (VEREINFACHT) =======================
+st.set_page_config(page_title="Article-QA v9 (Robustes RAG-System)", layout="wide")
 
 if check_password():
-    analysis_retriever_base, embeddings, text_splitter = setup_base_retrievers()
-    st.title("🛍️ Article-QA v8 (Flexibles RAG-System)")
+    analysis_retriever, creative_retriever = setup_retrievers()
+    st.title("🛍️ Article-QA v9 (Robustes RAG-System)")
 
     article_text = st.text_area(
         "Füge hier den originalen Artikeltext ein:",
@@ -115,8 +105,8 @@ if check_password():
     st.markdown("Analysiere den oben eingefügten Text anhand des universellen Bewertungs-Regelwerks.")
     
     if st.button("Analyse starten"):
-        if article_text and analysis_retriever_base:
-            analysis_chain = setup_chain(analysis_retriever_base, "systemprompt.txt", temperature=0.1)
+        if article_text and analysis_retriever:
+            analysis_chain = setup_chain(analysis_retriever, "systemprompt.txt", temperature=0.1)
             if analysis_chain:
                 with st.spinner("Das Analyse-System arbeitet..."):
                     try:
@@ -135,19 +125,6 @@ if check_password():
     st.header("2. KI-gestützte Texterstellung")
     st.markdown("Lass die KI einen neuen, optimierten Artikeltext basierend auf dem Original erstellen.")
 
-    # NEU: Dynamische Auswahl der Artikelart basierend auf den verfügbaren Regel-Dateien
-    try:
-        rule_files = glob.glob('./data/erstellung/regelwerk_struktur_*.txt')
-        # Extrahiert den "Typ" aus dem Dateinamen (z.B. "lebensmittel")
-        article_types = [os.path.basename(f).replace('regelwerk_struktur_', '').replace('.txt', '') for f in rule_files]
-        if not article_types:
-            st.error("Keine Struktur-Regelwerke im Ordner 'data/erstellung/' gefunden.")
-            article_types = ["default"]
-    except Exception:
-        article_types = ["default"]
-
-    selected_article_type = st.selectbox("Wähle die Artikelart (Regelwerk):", options=article_types)
-
     style = st.select_slider(
         "Stil:",
         options=["Sachlich", "Moderat", "Kreativ"],
@@ -156,14 +133,10 @@ if check_password():
     do_rezept = st.checkbox("Rezeptvorschlag generieren", value=False)
     
     if st.button("✨ Artikeltext mit KI erstellen"):
-        if article_text and selected_article_type:
-            # Holt den passenden Retriever für die gewählte Artikelart
-            creative_retriever = get_creative_retriever(selected_article_type, embeddings, text_splitter)
-            
+        if article_text and creative_retriever:
             temp_map = {"Sachlich": 0.2, "Moderat": 0.5, "Kreativ": 0.8}
             temperature = temp_map.get(style, 0.5)
             
-            # (Der Rest der Logik bleibt gleich)
             creative_chain = setup_chain(creative_retriever, "systemprompt_creative.txt", temperature=temperature)
             if creative_chain:
                 command_string = "(Vorschlag)"
