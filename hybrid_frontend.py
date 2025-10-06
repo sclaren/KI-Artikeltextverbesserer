@@ -131,6 +131,7 @@ if check_password():
         value="Moderat"
     )
     do_rezept = st.checkbox("Rezeptvorschlag generieren", value=False)
+    do_kategorien = st.checkbox("Kategoriervorschlag generieren", value=False)
     
     if st.button("✨ Artikeltext mit KI erstellen"):
         if article_text and creative_retriever:
@@ -140,7 +141,10 @@ if check_password():
             creative_chain = setup_chain(creative_retriever, "systemprompt_kreativ.txt", temperature=temperature)
             if creative_chain:
                 command_string = "(Vorschlag)"
-                if do_rezept: command_string += "(Rezept)"
+                if do_rezept: 
+                    command_string += "(Rezept)"
+                if do_kategorien: 
+                    command_string += "(Kategorien)" # HIER IST DIE KORREKTUR
                 final_input = f"{command_string}{article_text}"
                 with st.spinner(f"Das Kreativ-System generiert den Text im Stil '{style}'..."):
                     try:
@@ -149,6 +153,6 @@ if check_password():
                         st.markdown("### Ergebnis der KI-Texterstellung")
                         st.markdown(answer)
                     except Exception as e:
-                        st.error(f"Ein Fehler ist aufgetreten: {e}")
+                        st.error
         else:
             st.warning("Bitte gib einen Text ein oder warte, bis das RAG-System bereit ist.")
