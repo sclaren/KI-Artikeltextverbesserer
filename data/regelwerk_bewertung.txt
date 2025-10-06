@@ -1,60 +1,11 @@
-[BEWERTUNG: Gewichtung: Vollständigkeit] Das Kriterium Vollständigkeit hat eine Gewichtung von 0.25.
-[BEWERTUNG: Gewichtung: Verständlichkeit & Lesbarkeit] Das Kriterium Verständlichkeit & Lesbarkeit hat eine Gewichtung von 0.18.
-[BEWERTUNG: Gewichtung: SEO & Auffindbarkeit] Das Kriterium SEO & Auffindbarkeit hat eine Gewichtung von 0.15.
-[BEWERTUNG: Gewichtung: Strukturierung & Formatierung] Das Kriterium Strukturierung & Formatierung hat eine Gewichtung von 0.12.
-[BEWERTUNG: Gewichtung: Nutzenorientierung] Das Kriterium Nutzenorientierung hat eine Gewichtung von 0.15.
-[BEWERTUNG: Gewichtung: Rechtssicherheit] Das Kriterium Rechtssicherheit hat eine Gewichtung von 0.13.
-[BEWERTUNG: Gewichtung: Call-to-Action] Das Kriterium Call-to-Action hat eine Gewichtung von 0.02.
+[BEWERTUNG: Kriterium: Vollständigkeit]
+- Check: Eine Angabe zu Gewicht oder Menge ist vorhanden.
+- Check: Eine Angabe zur Herkunft (Land/Region) ist vorhanden.
+- Check: Eine Zutatenliste ist vorhanden.
+- Check: Allergenhinweise sind vorhanden.
+- Check: Lagerungshinweise sind vorhanden.
 
-[BEWERTUNG: Regel: Einzelkriterien-Punkte] Die Punktevergabe für jedes Kriterium folgt einem 4-Stufen-System:
-- 10 Punkte (Exzellent): 100% der Checklisten-Punkte für dieses Kriterium sind erfüllt.
-- 7 Punkte (Gut): Mindestens 75% der Checklisten-Punkte sind erfüllt.
-- 4 Punkte (Solide): Mindestens 50% der Checklisten-Punkte sind erfüllt.
-- 0 Punkte (Überarbeiten): Weniger als 50% der Checklisten-Punkte sind erfüllt.
-
-[BEWERTUNG: Checkliste: Vollständigkeit] Ein Kriterium für Vollständigkeit ist die Angabe von Gewicht oder Menge.
-[BEWERTUNG: Checkliste: Vollständigkeit] Ein Kriterium für Vollständigkeit ist die Angabe von Herkunft oder Land.
-[BEWERTUNG: Checkliste: Vollständigkeit] Ein Kriterium für Vollständigkeit ist die Angabe der Haltbarkeit.
-[BEWERTUNG: Checkliste: Vollständigkeit] Ein Kriterium für Vollständigkeit ist die Angabe der Produktionsart.
-[BEWERTUNG: Checkliste: Vollständigkeit] Ein Kriterium für Vollständigkeit ist eine Zutatenliste.
-[BEWERTUNG: Checkliste: Vollständigkeit] Ein Kriterium für Vollständigkeit ist die Angabe von Nährwerten.
-[BEWERTUNG: Checkliste: Vollständigkeit] Ein Kriterium für Vollständigkeit sind Lagerungshinweise.
-[BEWERTUNG: Checkliste: Vollständigkeit] Ein Kriterium für Vollständigkeit ist eine Verwendungsempfehlung.
-[BEWERTUNG: Checkliste: Vollständigkeit] Ein Kriterium für Vollständigkeit ist die Angabe von Allergenen.
-[BEWERTUNG: Checkliste: Vollständigkeit] Ein Kriterium für Vollständigkeit ist die Angabe von Hersteller oder Zertifikaten.
-
-[BEWERTUNG: Checkliste: Verständlichkeit & Lesbarkeit] Ein Kriterium für Verständlichkeit ist eine durchschnittliche Satzlänge von maximal 20 Wörtern.
-[BEWERTUNG: Checkliste: Verständlichkeit & Lesbarkeit] Ein Kriterium für Verständlichkeit ist die Abwesenheit von Rechtschreibfehlern.
-[BEWERTUNG: Checkliste: Verständlichkeit & Lesbarkeit] Ein Kriterium für Verständlichkeit ist die Abwesenheit von Grammatikfehlern.
-[BEWERTUNG: Checkliste: Verständlichkeit & Lesbarkeit] Der Text enthält weniger als 5 Füllwörter (z.B. "eigentlich", "gewissermaßen", "vielleicht").
-[BEWERTUNG: Checkliste: Verständlichkeit & Lesbarkeit] Der Text verwendet durchgehend eine konsistente Ansprache (z.B. "Sie" oder "Du", nicht gemischt).
-
-[BEWERTUNG: Checkliste: SEO & Auffindbarkeit] Ein SEO-Kriterium ist die Platzierung des Hauptkeywords im Titel innerhalb der ersten 50 Zeichen.
-[BEWERTUNG: Checkliste: SEO & Auffindbarkeit] Ein SEO-Kriterium ist eine Keyword-Dichte von 1 bis 3 Prozent im Text.
-[BEWERTUNG: Checkliste: SEO & Auffindbarkeit] Ein SEO-Kriterium ist die Verwendung von mindestens zwei semantischen Synonymen.
-[BEWERTUNG: Checkliste: SEO & Auffindbarkeit] Ein SEO-Kriterium ist eine Textlänge zwischen 100 und 400 Wörtern.
-
-[BEWERTUNG: Checkliste: Strukturierung & Formatierung] Ein Struktur-Kriterium ist die Verwendung von mindestens 3 Absätzen.
-[BEWERTUNG: Checkliste: Strukturierung & Formatierung] Ein Struktur-Kriterium ist die Verwendung von Aufzählungen (Bullet Points).
-[BEWERTUNG: Checkliste: Strukturierung & Formatierung] Ein Struktur-Kriterium ist die Verwendung von Hervorhebungen (fett oder kursiv).
-[BEWERTUNG: Checkliste: Strukturierung & Formatierung] Ein Struktur-Kriterium ist eine maximale Absatzlänge von 80 Wörtern.
-
-[BEWERTUNG: Checkliste: Nutzenorientierung] Der Text enthält mindestens zwei Anwendungsbeispiele.
-[BEWERTUNG: Checkliste: Nutzenorientierung] Der Text beschreibt eine sensorische Eigenschaft (z.B. Geschmack, Geruch, Textur).
-[BEWERTUNG: Checkliste: Nutzenorientierung] Der Text enthält mindestens eines der folgenden Signalwörter: "Vorteil", "Genuss", "einfach", "schnell", "praktisch".
-
-[BEWERTUNG: Checkliste: Rechtssicherheit] Ein Kriterium für Rechtssicherheit ist eine vollständige Zutatenliste.
-[BEWERTUNG: Checkliste: Rechtssicherheit] Ein Kriterium für Rechtssicherheit sind korrekte Allergenhinweise.
-[BEWERTUNG: Checkliste: Rechtssicherheit] Ein Kriterium für Rechtssicherheit ist das Vorhandensein von Lagerungshinweisen.
-[BEWERTUNG: Checkliste: Rechtssicherheit] Ein Kriterium für Rechtssicherheit sind ausreichende Herstellerangaben.
-
-[BEWERTUNG: Punkteregel: Call-to-Action] Für das Kriterium Call-to-Action werden je nach Klarheit der Handlungsaufforderung 10, 7, 4 oder 0 Punkte vergeben.
-[BEWERTUNG: Formel: Gesamtscore] Der Gesamtscore wird berechnet mit der Formel: GESAMTSCORE = Summe aller (KRITERIUM_PUNKTE × GEWICHTUNG).
-[BEWERTUNG: Klassifikation: Regel] Ein Gesamtscore wird auf eine Dezimalstelle gerundet.
-
-[BEWERTUNG: Klassifikation: Stufen] Die Gesamtbewertung folgt einem 4-Stufen-System:
-[BEWERTUNG: Klassifikation: Exzellent] Ein Gesamtscore von 9,0 bis 10,0 entspricht der Klassifikation EXZELLENT.
-[BEWERTUNG: Klassifikation: Gut] Ein Gesamtscore von 7,0 bis 8,9 entspricht der Klassifikation GUT.
-[BEWERTUNG: Klassifikation: Solide] Ein Gesamtscore von 5,0 bis 6,9 entspricht der Klassifikation SOLIDE.
-[BEWERTUNG: Klassifikation: Überarbeiten] Ein Gesamtscore unter 5,0 entspricht der Klassifikation ÜBERARBEITEN.
-```
+[BEWERTUNG: Kriterium: Lesbarkeit & SEO]
+- Check: Die Textlänge liegt zwischen 100 und 400 Wörtern.
+- Check: Das angenommene Hauptkeyword befindet sich innerhalb der ersten 50 Zeichen des Titels.
+- Check: Die durchschnittliche Satzlänge beträgt maximal 20 Wörter.
