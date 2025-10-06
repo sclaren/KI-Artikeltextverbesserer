@@ -3,8 +3,7 @@
 [STRUKTUR: Regel: Titel-Format] Das Format des Titels muss sein: {{Produktname}} {{Gewicht/Volumen}} – {{Hauptnutzen}}.
 [STRUKTUR: Regel: Titel-Keyword] Das Hauptkeyword muss innerhalb der ersten 50 Zeichen des Titels platziert werden.
 [STRUKTUR: Regel: Titel-Länge] Die Länge des Titels muss zwischen 40 und 70 Zeichen inklusive Leerzeichen liegen.
-
-[STRUKTUR: Regel: Einleitung-Länge] Der Einleitungs-Abschnitt muss 1-2 Sätze und 25-50 Wörter umfassen.
+[STRUKTUR: Regel: Einleitung-Länge] Die Einleitungslänge ist flexibel und richtet sich nach dem gewünschten Stil. Ein sachlicher Text erfordert eine kurze, prägnante Einleitung, während ein kreativer Text eine längere, erzählerische Einleitung haben kann.
 [STRUKTUR: Regel: Einleitung-Inhalt] Der Produktname muss im ersten Satz fett hervorgehoben sein.
 [STRUKTUR: Regel: Einleitung-Inhalt] Mindestens ein semantisches Synonym muss kursiv hervorgehoben sein.
 [STRUKTUR: Regel: Einleitung-Inhalt] Herkunft und Produktionsart müssen in der Einleitung erwähnt werden.
