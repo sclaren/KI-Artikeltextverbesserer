@@ -1,54 +1,41 @@
 [STRUKTUR: Regel: Artikel-Anatomie] Eine Artikelbeschreibung muss exakt 6 Abschnitte in einer festen Reihenfolge enthalten: TITEL, EINLEITUNG, PRODUKTVORTEILE, DEKLARATION, NÄHRWERTE, ANWENDUNG.
-
 [STRUKTUR: Regel: Titel-Format] Das Format des Titels muss sein: {{Produktname}} {{Gewicht/Volumen}} – {{Hauptnutzen}}.
 [STRUKTUR: Regel: Titel-Keyword] Das Hauptkeyword muss innerhalb der ersten 50 Zeichen des Titels platziert werden.
 [STRUKTUR: Regel: Titel-Länge] Die Länge des Titels muss zwischen 40 und 70 Zeichen inklusive Leerzeichen liegen.
-[STRUKTUR: Regel: Einleitung-Länge] Die Einleitungslänge ist flexibel und richtet sich nach dem gewünschten Stil. Ein sachlicher Text erfordert eine kurze, prägnante Einleitung, während ein kreativer Text eine längere, erzählerische Einleitung haben kann.
-[STRUKTUR: Regel: Einleitung-Satz-1] Der erste Satz der Einleitung muss den Produktnamen fett und ein Synonym kursiv enthalten.
-[STRUKTUR: Regel: Einleitung-Satz-2+] Die darauffolgenden Sätze müssen Herkunft und Produktionsart beschreiben, um den Text zu vertiefen.
-
+[STRUKTUR: Regel: Einleitung-Inhalt] Die Einleitung muss den Produktnamen (beim ersten Mal fett), mindestens ein Synonym (kursiv), die Herkunft und die Produktionsart enthalten. Die Verteilung dieser Elemente auf die Sätze ist flexibel.
 [STRUKTUR: Regel: Produktvorteile-Überschrift] Der Produktvorteile-Abschnitt muss die Überschrift "Produktvorteile auf einen Blick:" enthalten.
 [STRUKTUR: Regel: Produktvorteile-Liste] Die Produktvorteile müssen als Bullet-Point-Liste mit 4-5 Items dargestellt werden.
 [STRUKTUR: Regel: Produktvorteile-Reihenfolge] Die Reihenfolge der Bullet Points muss sein: Verpackung, MHD, Qualitätsmerkmale, Herstellung.
 [STRUKTUR: Regel: Produktvorteile-Länge] Jeder Bullet Point darf maximal 10 Wörter lang sein.
-
 [STRUKTUR: Regel: Deklaration-Inhalt] Der Deklarations-Abschnitt muss eine vollständige Zutatenliste mit Prozentangaben enthalten.
 [STRUKTUR: Regel: Deklaration-Inhalt] Der Deklarations-Abschnitt muss eine Pflichtangabe für Allergene nach LMIV enthalten.
 [STRUKTUR: Regel: Deklaration-Format] Zwischen Zutaten und Allergenen dürfen keine zusätzlichen Absätze sein.
-
 [STRUKTUR: Regel: Nährwerte-Überschrift] Der Nährwert-Abschnitt muss mit der fettgedruckten Überschrift "Nährwerte pro 100 {{g/ml}}:" beginnen.
 [STRUKTUR: Regel: Nährwerte-Format] Die Nährwerte müssen in einem einzeiligen Format mit Kommata als Trennung angegeben werden.
 [STRUKTUR: Regel: Nährwerte-Reihenfolge] Die Reihenfolge der Nährwerte muss sein: Energie, Fett, Kohlenhydrate, Ballaststoffe, Eiweiß, Salz.
-
 [STRUKTUR: Regel: Anwendung-Länge] Der Anwendungs-Abschnitt muss 30-60 Wörter umfassen.
 [STRUKTUR: Regel: Anwendung-Inhalt] Der Anwendungs-Abschnitt muss 2-3 Sätze enthalten, die Anwendungsbeispiele, Lagerungshinweise und einen Call-to-Action beinhalten.
 [STRUKTUR: Regel: Anwendung-Hervorhebung] Der Produktname muss im Anwendungs-Abschnitt erneut fett hervorgehoben werden.
 [STRUKTUR: Regel: Anwendung-Hervorhebung] Der Call-to-Action muss im Anwendungs-Abschnitt immer fett markiert sein.
-
 [STRUKTUR: Regel: Textfluss] Zwischen Titel und Einleitung darf kein Absatz sein.
 [STRUKTUR: Regel: Textfluss] Zwischen allen anderen Abschnitten muss ein doppelter Zeilenumbruch verwendet werden.
 [STRUKTUR: Regel: Textfluss] Jeder Absatz muss inhaltlich abgeschlossen sein.
-
 [STRUKTUR: Regel: Hervorhebung-Anzahl] Der Produktname wird beim ersten und letzten Auftreten fett markiert.
 [STRUKTUR: Regel: Hervorhebung-Anzahl] Das erste verwendete Synonym wird kursiv markiert.
 [STRUKTUR: Regel: Hervorhebung-Anzahl] Die Überschriften für Deklaration und Nährwerte werden fett markiert.
 [STRUKTUR: Regel: Hervorhebung-Anzahl] Es dürfen maximal 3 fett-markierte Stellen pro Absatz vorkommen.
-
 [STRUKTUR: Regel: Längen-Gesamt] Die Gesamtlänge des Artikels muss zwischen 180 und 400 Wörtern liegen.
 [STRUKTUR: Regel: Längen-Satz] Die durchschnittliche Satzlänge darf maximal 20 Wörter betragen.
 [STRUKTUR: Regel: Längen-Absatz] Die maximale Absatzlänge beträgt 80 Wörter.
-
 [STRUKTUR: Verbot: Überschriften] Zusätzliche Überschriften außerhalb der 6 definierten Abschnitte sind verboten.
 [STRUKTUR: Verbot: Listen] Nummerierte Listen sind verboten.
 [STRUKTUR: Verbot: Listen] Verschachtelte Bullet Points sind verboten.
 [STRUKTUR: Verbot: Tabellen] Tabellen sind in der Artikelbeschreibung verboten.
 [STRUKTUR: Verbot: Preis] Preisangaben oder Informationen zur Verfügbarkeit sind verboten.
 [STRUKTUR: Verbot: Vergleiche] Produktvergleiche mit anderen Artikeln sind verboten.
-
 [STRUKTUR: Regel: Fehlende-Daten] Daten dürfen niemals erfunden werden.
 [STRUKTUR: Regel: Fehlende-Daten] Bei fehlenden Informationen in einer Bullet-Point-Liste wird der Punkt weggelassen oder ein {{Platzhalter}} verwendet.
 [STRUKTUR: Regel: Fehlende-Daten] Bei fehlender Mindesthaltbarkeit ist der Satz "Mindesthaltbarkeit: siehe Etikett" zu verwenden.
-
 [STRUKTUR: Checkliste: Konsistenz] Es muss geprüft werden, ob alle 6 Hauptabschnitte vorhanden und in korrekter Reihenfolge sind.
 [STRUKTUR: Checkliste: Konsistenz] Es muss geprüft werden, ob alle Hervorhebungen korrekt gesetzt wurden.
 [STRUKTUR: Checkliste: Konsistenz] Es muss geprüft werden, ob der Produktname 2-4 Mal im Text genannt wird.
