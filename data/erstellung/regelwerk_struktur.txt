@@ -4,9 +4,8 @@
 [STRUKTUR: Regel: Titel-Keyword] Das Hauptkeyword muss innerhalb der ersten 50 Zeichen des Titels platziert werden.
 [STRUKTUR: Regel: Titel-Länge] Die Länge des Titels muss zwischen 40 und 70 Zeichen inklusive Leerzeichen liegen.
 [STRUKTUR: Regel: Einleitung-Länge] Die Einleitungslänge ist flexibel und richtet sich nach dem gewünschten Stil. Ein sachlicher Text erfordert eine kurze, prägnante Einleitung, während ein kreativer Text eine längere, erzählerische Einleitung haben kann.
-[STRUKTUR: Regel: Einleitung-Inhalt] Der Produktname muss im ersten Satz fett hervorgehoben sein.
-[STRUKTUR: Regel: Einleitung-Inhalt] Mindestens ein semantisches Synonym muss kursiv hervorgehoben sein.
-[STRUKTUR: Regel: Einleitung-Inhalt] Herkunft und Produktionsart müssen in der Einleitung erwähnt werden.
+[STRUKTUR: Regel: Einleitung-Satz-1] Der erste Satz der Einleitung muss den Produktnamen fett und ein Synonym kursiv enthalten.
+[STRUKTUR: Regel: Einleitung-Satz-2+] Die darauffolgenden Sätze müssen Herkunft und Produktionsart beschreiben, um den Text zu vertiefen.
 
 [STRUKTUR: Regel: Produktvorteile-Überschrift] Der Produktvorteile-Abschnitt muss die Überschrift "Produktvorteile auf einen Blick:" enthalten.
 [STRUKTUR: Regel: Produktvorteile-Liste] Die Produktvorteile müssen als Bullet-Point-Liste mit 4-5 Items dargestellt werden.
