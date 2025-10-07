@@ -106,7 +106,7 @@ if check_password():
     
     if st.button("Analyse starten"):
         if article_text and analysis_retriever:
-            analysis_chain = setup_chain(analysis_retriever, "systemprompt_bewertung.txt", temperature=0.1)
+            analysis_chain = setup_chain(analysis_retriever, "prompts/systemprompt_bewertung.txt", temperature=0.1)
             if analysis_chain:
                 with st.spinner("Das Analyse-System arbeitet..."):
                     try:
@@ -137,9 +137,9 @@ if check_password():
         if article_text and creative_retriever:
             # Wähle das passende Prompt File abhängig vom eingestellten Stil
             prompt_file_map = {
-                "Sachlich": "prompt_sachlich.txt",
-                "Moderat": "prompt_moderat.txt",
-                "Kreativ": "prompt_kreativ.txt"
+                "Sachlich": "prompts/systemprompt_sachlich.txt",
+                "Moderat": "prompts/systemprompt_moderat.txt",
+                "Kreativ": "prompts/systemprompt_kreativ.txt"
             }
             prompt_file = prompt_file_map.get(style)
             
