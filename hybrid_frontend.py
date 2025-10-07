@@ -135,10 +135,19 @@ if check_password():
     
     if st.button("✨ Artikeltext mit KI erstellen"):
         if article_text and creative_retriever:
+            # Wähle das passende Prompt File abhängig vom eingestellten Stil
+            prompt_file_map = {
+                "Sachlich": "prompt_sachlich.txt",
+                "Moderat": "prompt_moderat.txt",
+                "Kreativ": "prompt_kreativ.txt"
+            }
+            prompt_file = prompt_file_map.get(style)
+            
+            # Temperatur einstellen in Abhängikeit vom Stil
             temp_map = {"Sachlich": 0.2, "Moderat": 0.5, "Kreativ": 0.8}
             temperature = temp_map.get(style, 0.5)
             
-            creative_chain = setup_chain(creative_retriever, "systemprompt_kreativ.txt", temperature=temperature)
+            creative_chain = setup_chain(creative_retriever, prompt_file, temperature=temperature)
             if creative_chain:
                 command_string = "(Vorschlag)"
                 if do_rezept: 
