@@ -132,7 +132,6 @@ if check_password():
     analysis_retriever, creative_retriever = setup_retrievers()
     st.title("🛍️ AI Artikelverbesserer")
 
-    # KORREKTUR: Der Expander für den Bildupload wird jetzt VOR dem Textfeld gezeichnet.
     with st.expander("Optional: Text aus Produktbildern extrahieren", expanded=st.session_state.expander_state):
         uploaded_files_new = st.file_uploader(
             "Laden Sie hier Produktbilder hoch (Vorder- und Rückseite)",
@@ -155,7 +154,7 @@ if check_password():
                         st.session_state.expander_state = True
                         st.rerun()
 
-        if st.button("Text aus Bildern extrahieren"):
+        if st.button("✨ Text aus Bildern extrahieren"):
             extracted_text = extract_text_from_images(st.session_state.uploaded_files)
             st.session_state.main_text_area = extracted_text
             st.session_state.uploaded_files = []
@@ -166,7 +165,7 @@ if check_password():
 
     st.header("Artikeltext")
     
-    # Das Textfeld wird jetzt NACH dem Code gezeichnet, der seinen Zustand ändern könnte.
+    # --- Textfeld ---
     article_text = st.text_area(
         "Fügen Sie hier den originalen Artikeltext ein (oder nutzen Sie den Bildupload oben):",
         height=300,
